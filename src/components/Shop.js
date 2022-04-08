@@ -49,7 +49,7 @@ const Shop = () => {
                     return (
                         <Card className="food-container" key={food.id} id={food.id}>
                             <Card.Img variant="top" src={food.image} />
-                            <Card.Body style={{ position: "relative", bottom: "80px" }}>
+                            <Card.Body style={{ position: "relative" }}>
                                 <h1>{food.name}</h1>
                                 <Card.Text>{food.description}</Card.Text>
                                 <div style={{ display: "flex", gap: "10px" }}>

@@ -33,10 +33,6 @@ html {
   width: 55vw;
 }
 
-.card-body {
-  bottom: 0 !important;
-}
-
 .cart-icon {
   cursor: pointer;
   position: fixed;
