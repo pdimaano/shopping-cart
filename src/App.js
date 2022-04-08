@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { React } from "react";
+import {
+  Redirect,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  HashRouter,
+} from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
+import { Nav, Navbar } from "react-boostrap";
+import Homepage from "./components/Homepage";
+import Shop from "./components/Shop";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Navbar bg="light" variant="light" style={{}} expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="navbar">
+            <LinkContainer to={process.env.PUBLIC_URL}>
+              <Nav.Link>Home</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to={process.env.PUBLIC_URL + "/shop"}>
+              <Nav.Link>Shop</Nav.Link>
+            </LinkContainer>
+          </Nav>
+        </Navbar.Collapse>
+
+      </Navbar>
+      <Switch>
+        <Route exact path={process.env.PUBLIC_URL}>
+          <Homepage />
+        </Route>
+        <Route path={process.env.PUBLIC_URL + "/shop"}>
+          <Shop />
+        </Route>
+        <Route exact path={"/"}>
+          <Redirect to={process.env.PUBLIC_URL} />
+        </Route>
+        <Route path={"/"}>
+          <Redirect to={process.env.PUBLIC_URL} />
+        </Route>
+        <Route path={"*"}>
+          <Redirect to={process.env.PUBLIC_URL} />
+        </Route>
+      </Switch>
+    </HashRouter>
   );
-}
+};
 
 export default App;
