@@ -16,7 +16,7 @@ html {
 }
 
 .shop-page {
-  background: rgb(30, 27, 27);
+  background: #93cee3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -24,12 +24,15 @@ html {
 }
 
 .food-container {
-  opacity: 0;
   background: rgba(0, 0, 0, 0);
   width: 50rem;
   color: white;
   font-family: title;
   border: 0 none;
+}
+
+.card-img-top {
+  width: 55vw;
 }
 
 .cart-icon {
