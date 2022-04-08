@@ -1,8 +1,8 @@
 import { React } from "react";
 import {
-  Redirect,
+  Navigate,
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   HashRouter,
 } from "react-router-dom";
@@ -28,7 +28,7 @@ const App = () => {
         </Navbar.Collapse>
 
       </Navbar>
-      <Switch>
+      <Routes>
         <Route exact path={process.env.PUBLIC_URL}>
           <Homepage />
         </Route>
@@ -36,15 +36,15 @@ const App = () => {
           <Shop />
         </Route>
         <Route exact path={"/"}>
-          <Redirect to={process.env.PUBLIC_URL} />
+          <Navigate to={process.env.PUBLIC_URL} />
         </Route>
         <Route path={"/"}>
-          <Redirect to={process.env.PUBLIC_URL} />
+          <Navigate to={process.env.PUBLIC_URL} />
         </Route>
         <Route path={"*"}>
-          <Redirect to={process.env.PUBLIC_URL} />
+          <Navigate to={process.env.PUBLIC_URL} />
         </Route>
-      </Switch>
+      </Routes>
     </HashRouter>
   );
 };
