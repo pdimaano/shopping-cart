@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { Card, Button, FormControl } from "react-bootstrap";
+import food from "../Data";
 import Checkout from "./Checkout";
 
 const Shop = () => {

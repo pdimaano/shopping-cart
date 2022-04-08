@@ -7,7 +7,7 @@ import {
   HashRouter,
 } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
-import { Nav, Navbar } from "react-boostrap";
+import { Nav, Navbar } from "react-bootstrap";
 import Homepage from "./components/Homepage";
 import Shop from "./components/Shop";
 
