@@ -1,10 +1,8 @@
 import { React } from "react";
 import {
-  Navigate,
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
-  HashRouter,
 } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar } from "react-bootstrap";
@@ -13,7 +11,7 @@ import Shop from "./components/Shop";
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Navbar bg="light" variant="light" style={{}} expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -29,23 +27,10 @@ const App = () => {
 
       </Navbar>
       <Routes>
-        <Route exact path={process.env.PUBLIC_URL}>
-          <Homepage />
-        </Route>
-        <Route path={process.env.PUBLIC_URL + "/shop"}>
-          <Shop />
-        </Route>
-        <Route exact path={"/"}>
-          <Navigate to={process.env.PUBLIC_URL} />
-        </Route>
-        <Route path={"/"}>
-          <Navigate to={process.env.PUBLIC_URL} />
-        </Route>
-        <Route path={"*"}>
-          <Navigate to={process.env.PUBLIC_URL} />
-        </Route>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/shop" element={<Shop />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
