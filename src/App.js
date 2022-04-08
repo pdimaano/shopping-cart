@@ -8,11 +8,12 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Nav, Navbar } from "react-bootstrap";
 import Homepage from "./components/Homepage";
 import Shop from "./components/Shop";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar bg="light" variant="light" style={{}} expand="lg">
+      <Navbar bg="light" expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="navbar">
