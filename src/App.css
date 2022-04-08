@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+body,
+html {
+  margin: 0;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.checkout-cart {
+  color: gray;
+  z-index: 1;
+  border-radius: 10px;
+  position: fixed;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  margin: 5% 0 0 -25%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.shop-page {
+  background: rgb(30, 27, 27);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+
+.food-container {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0);
+  width: 50rem;
   color: white;
+  font-family: title;
+  border: 0 none;
 }
 
-.App-link {
-  color: #61dafb;
+.cart-icon {
+  cursor: pointer;
+  position: fixed;
+  top: 100px;
+  right: -100px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close-cart {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: x-large;
+  position: absolute;
+  right: 0;
+  top: -9px;
+}
+
+.cart-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  flex-wrap: wrap;
+}
+
+.cart-total {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  word-break: break-all;
+  color: black;
+}
+
+.cart-bottom-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
