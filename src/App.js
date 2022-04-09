@@ -14,6 +14,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar bg="light" expand="lg">
+        <Navbar.Brand>Snack Shack</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="navbar">

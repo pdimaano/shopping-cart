@@ -1,7 +1,12 @@
 body,
 html {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #93cee3;
+}
+
+.navbar-brand {
+  padding-left: 10px;
 }
 
 .checkout-cart {
@@ -15,17 +20,18 @@ html {
 }
 
 .shop-page {
-  background: #93cee3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 30px;
   gap: 20px;
+  background: #93cee3;
+
 }
 
 .food-container {
   background: rgba(0, 0, 0, 0);
   width: 50rem;
-  font-family: title;
   border: 0 none;
 }
 

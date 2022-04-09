@@ -1,12 +1,12 @@
 const Homepage = () => {
     return (
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", background: "#93cee3" }}>
             <h1
                 style={{
                     display: "flex",
-                    color: "black",
-                    marginTop: "200px",
-                    fontFamily: "TITLE",
+                    color: "white",
+                    marginTop: "70px",
+                    fontSize: "3rem",
                 }}
             >
                 A One Stop Shop
