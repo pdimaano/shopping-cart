@@ -20,30 +20,30 @@ html {
 }
 
 .shop-page {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 30px;
+  justify-items: center;
+  padding: 30px;
   gap: 20px;
   background: #93cee3;
 
 }
 
 .food-container {
-  background: rgba(0, 0, 0, 0);
-  width: 50rem;
-  border: 0 none;
+  width: 350px;
 }
 
 .card-img-top {
-  width: 55vw;
+  width: 100px;
+  height: 300px;
 }
 
 .cart-icon {
   cursor: pointer;
   position: fixed;
   top: 100px;
-  right: -10px;
+  right: -5px;
   background: white;
   border-radius: 5px;
   padding: 10px;

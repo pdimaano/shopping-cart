@@ -5,7 +5,7 @@ const Homepage = () => {
                 style={{
                     display: "flex",
                     color: "white",
-                    marginTop: "70px",
+                    marginTop: "50px",
                     fontSize: "3rem",
                 }}
             >

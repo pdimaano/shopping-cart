@@ -43,7 +43,7 @@ const Shop = () => {
                     className="cart-icon"
                 >
                     <span>{cart.length}</span>
-                    <h3>CART</h3>
+                    <h4>Cart</h4>
                 </div>
                 {food.map((food) => {
                     return (
