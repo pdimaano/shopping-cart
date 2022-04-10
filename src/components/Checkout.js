@@ -2,12 +2,12 @@ import { React, useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 
 const Checkout = (props) => {
-    const [checkoutCart, setCheckoutCart] = useState(props.cart);
+    const [checkoutChart, setCheckoutCart] = useState(props.cart);
     const [totalAmount, setTotalAmount] = useState(0);
 
     useEffect(() => {
         setCheckoutCart(props.cart);
-        checkoutCart.forEach((item) => {
+        checkoutChart.forEach((item) => {
             const total = parseFloat(item.price);
             setTotalAmount((prev) => prev + total);
         });
@@ -40,7 +40,7 @@ const Checkout = (props) => {
                         width: "70%",
                     }}
                 >
-                    {checkoutCart.map((item) => {
+                    {checkoutChart.map((item) => {
                         return (
                             <div
                                 className="cart-item"
